@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% block links %}
+<link rel="stylesheet" href="/static/css/wor.css">
+{% endblock %}
+{% block content %}
+<article class="main-arc">
+{% if de %}
+
+
+    {% for i in results %}
+    <div class="content">
+      <a href="/series={{i.cat}}"><img src='{{i.paththumb}}'  alt="" class='thumb'></a>
+      <h1 class="movie-name">Series : {{i.cat}}</h1>
+    </div>
+
+{% endfor %}
+{% else %}
+
+    {% for i in results %}
+    <div class="content">
+      <img src='{{i.paththumb}}'  onclick="window.open('/watch={{i.numbe}}')" alt="" class='thumb'>
+      <h1 class="movie-name">{{i.name}}</h1>
+      <h3 class="catogary">Catogry: {{i.cat}}</h3>
+    </div>
+
+{% endfor %}
+{% endif %}
+    </article>
+{% endblock %}

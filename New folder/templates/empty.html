@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+{% block links %}
+
+{% endblock %}
+{% block content %}
+<div class='error'>
+    <h1 class="empty-error">you can't run empty search</h1>
+</div>
+<style>
+    .error{
+   border: 1px solid #EC5252;
+   margin: 100px;
+   display:flex;
+   justify-content: center;
+   background:#ffe4e4;
+}
+.empty-error{
+    color:#EC5252;
+}
+</style>
+{% endblock %}

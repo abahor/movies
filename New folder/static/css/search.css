@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+body{
+  font-family: 'Noto Serif', serif;
+}
+.films{
+  padding: 0px 130px 0px 10px;
+}
+.down{
+  position: relative;
+  background: rgba(90,90,90, 1);
+  margin-bottom: 15px;
+}
+.moviename{
+    display: inline-block;
+    position: absolute;
+    margin: 1vh 1vw;
+    font-size: 2vw;
+}
+.buttons{
+   display: inline-block;
+   margin: 0;
+   position: absolute;
+   top: 20vh;
+   left: 25vw;
+}
+.but{
+  margin: auto;
+  padding: .71vw .7vw;
+  outline: none;
+  border: none;
+  background: #B2B0B0;
+  border-radius: .2vw;
+  color: #fff;
+  font-size: 1.165vw;
+  background: #ec5252;
+  color: #fff;
+  margin: .3vw;
+}
+.catogry{
+  top: 9vh;
+}

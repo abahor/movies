@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Facemash</title>
+    <link rel="stylesheet" href="static/css/login.css">
+    <link href="http://127.0.0.1:5000/static/css/Roboto.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>welcome in facemash</h1>
+{% if error %}
+      <style>
+          .pass , .user{
+            /*border:1px solid rgb(255, 82, 82);*/
+          }
+          h3 {
+            text-align:center;
+            color:rgb(255, 9, 9);
+            font-family: cursive;
+          }
+      </style>
+{% endif %}
+    </header>
+    <form class="login log" id="login-form" action="index" method="post" onsubmit="sad()">
+        {% if error %}
+        <h3>the username or the password isn't correct </h3>
+        {% endif %}
+      <input type="email" name="email" value="" placeholder="someone@domainname" class="login user">
+      <input  id ="pass" type="password" name="pass" placeholder="password" class="login pass">
+      <input type="submit" name="submit" value="login" class='login submit'>
+    </form>
+    <footer>
+      <h1 style="margin-top: 250px;">Note: no Effeminates are allowed</h1>
+        <h4><a href="/register">sign up</a></h4>
+        <a href="/recover">recovery your email</a>
+    </footer>
+    <script>
+      document.getElementById('login-form').onsubmit = function() {
+    return isValidForm();
+    }
+      function isValidForm(){
+      var check = document.getElementById('pass');
+      if (check.value == "") {
+        alert('you should Enter a password');
+        return false;
+      }else{
+      return true;
+      }
+      }
+    </script>
+  </body>
+</html>

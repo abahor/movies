@@ -1,0 +1,80 @@
+ul{
+  display: inline-block;
+}
+.mp3{
+  float: right;
+}
+.imge{
+    height: 32px;
+    width: 34px;
+    margin-top: 14px;
+}
+
+/*video {
+    position: absolute;
+    width: 100%;
+    /* height: 100%;
+    /* padding: 0px;
+    /* margin: auto;
+    top: 60px;
+    right: 0px;
+    left: 0px;
+    z-index: -4;
+}*/
+li{
+  display: inline-block;
+  list-style: none;
+  margin: 7px;
+  margin-left: 36px;
+  color: #fff;/*
+  transition: border-bottom 1s;*/
+}
+li:hover{
+  border-bottom: 3px rgba(26,29,29,1) solid;
+  cursor:default;
+}
+header{
+  width: 100%;
+  background: rgb(80, 80, 80);
+  position: fixed;
+  top: 0px;
+  height: 60px;
+  z-index: 5;
+}
+body{
+  background-image: url("action back.jpg");
+  margin: 0px;
+  margin-top: 60px;
+  width:100%;
+  background-size: cover;/*
+  font-family: 'Roboto',serif;*/
+  font-family: 'Roboto',serif;
+}
+video{
+  width: 330px;
+  height: 192px;/*
+  margin: 0px;*/
+}
+audio{
+  height: 32px;
+  margin-top: 13px;
+  float: right;
+  margin-right: 15px;
+  margin-left: 17px;
+}
+p {
+  font-family: sans-serif;
+  display: inline-block;
+/*  margin-left: 116px;
+  margin-right: 88px;
+  margin-top: 5px;*/
+}
+.movie{
+  width: 100%;
+}
+.name{
+  width: 24.48%;
+  display: inline-block;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+}

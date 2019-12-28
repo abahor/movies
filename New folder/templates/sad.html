@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+{% block links %}
+
+{% endblock %}
+{% block content %}
+{% if register %}
+<div class='error'>
+    <h3 class="empty-error">you are already login in to this site as {{username }} if this isn't you <a href="logout">press here</a></h3>
+        </div>
+{% else %}
+    {%  if notfound %}
+        <div class='error'>
+            <h1 class="empty-error">Sorry, something went wrong try again after sometime</h1>
+        </div>
+    {%else %}
+        {%if dde %}
+        <div class='error'>
+            <h1 class="empty-error">Sorry, not found on the server</h1>
+        </div>
+        {% else %}
+        <div class='error'>
+            <h1 class="empty-error">Sorry, not found on the server</h1>
+            <ul class="list">
+                <li class="it">Try to use less word</li>
+                <li class="it">Check word spelling</li>
+            </ul>
+            <h1 class="empty-error">If you don't found it you can search for it online and add it to the server</h1>
+        </div>
+        {% endif %}
+    {% endif %}
+{% endif %}
+<style>
+    .it{
+    display:block;
+    }
+    .list{
+    display:block !important;
+    color:#EC5252;
+    text-align:center;
+    font-size: 1.5vw;
+    }
+    .error{
+   border: 1px solid #EC5252;
+   margin: 100px;
+   background:#ffe4e4;
+}
+.empty-error{
+    display:block;
+    color:#EC5252;
+    text-align:center;
+}
+</style>
+{% endblock %}

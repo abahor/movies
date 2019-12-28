@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Facemash</title>
+    <link rel="stylesheet" href="/static/css/register.css">
+  </head>
+  <body>
+    <div class="main">
+      <form class="reg" id="my-form" action="/change_password" method="post" enctype="multipart/form-data">
+        <h1>please fill all parts</h1>
+        <div class="">
+        <h3>Enter you email</h3><br>
+        <input type="email" name="email" class="form email" value="" placeholder="someone@example.com" required><hr>
+      </div>
+      <div class="">
+        <h3>Enter your phone number</h3><br>
+        <input type="password" name="phone" class="form password" value="" id="phone" placeholder="Enter you phone number" required><hr>
+      </div>
+      <div class="">
+        <h3>Enter you new password</h3><br>
+        <input type="password" name="password" class="form password" value="" id="pass" placeholder="Enter password" required><hr>
+      </div>
+      <div class="">
+        <h3>Retype you password</h3><br>
+        <input type="password" name="" class="form password" value="" id="repass" placeholder="Repeat password" required><hr>
+      </div>
+      <div class="">
+        <span>by using this site you agree to the terms of uses and condition</span><br>
+        <button id="sub" type="submit" class="form" name="button">Submit</button>
+      </div>
+      </form>
+    </div>
+    <script src="/static/js/register.js"></script>
+  </body>
+</html>

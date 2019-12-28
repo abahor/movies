@@ -1,0 +1,103 @@
+{% extends 'main.html' %}
+{% block links %}
+    <link rel="stylesheet" href="static/css/testing.css">
+{% endblock %}
+{% block content %}
+<form class="upload-form" action="/uploaded" method="post" enctype="multipart/form-data">
+      <h1 class="fre">Upload your movie</h1>
+      <ul class="listss">
+        <li>The movie should be on highest quialty</li>
+        <li>You should add thumbnail to the movie</li>
+        <li>Don't upload shit you will be catched</li>
+      </ul>
+    {% if missing %}
+        <h1 class="fre" style="color:red">please,fill all parts</h1>
+        {% if mov %}
+            <style>
+            .namesas{
+                 border: 4px solid #f00;
+            }
+            </style>
+        {% elif thum %}
+            <style>
+            .io{
+                 border: 4px solid #f00;
+            }
+            </style>
+        {% elif text %}
+        <style>
+            .sadadness{
+                border: 4px solid #f00;
+            }
+        </style>
+        {% endif %}
+    {% elif formamovie %}
+        <h1 class="fre" style="color:red">we don't accept this type of format try another one</h1>
+        {% if de %}
+        <style>
+            .namesas{
+                 border: 4px solid #f00;
+            }
+        </style>
+        {% elif thumb %}
+        <style>
+            .io{
+                 border: 4px solid #f00;
+            }
+            </style>
+        {% endif %}
+    {% elif wrong %}
+        <h1 class="fre" style="color:red">something went wrong try after some time</h1>
+    {% endif %}
+      <h1 class="fre">Enter the movie you want to add</h1>
+      <input type="file" name="movie" class='namesas' value="" accept="video/*,mkv">
+
+      <h1 class="fre">Enter the thumbnail of the movie</h1>
+      <input class="thumbdd io" type="file" name="moviethumb" value="" accept="image/*">
+
+      <h1 id="dede" class="fre">Enter the movie name</h1>
+      <input class="thumbdd sadadness" type="text" name="moviename" value="">
+
+      <h1 class="fre">Enter movie catogray</h1>
+      <select id="cat" class="sel" name="catog"  onchange="sad()">
+        <option value="comedy">comedy</option>
+        <option value="action">action</option>
+        <option value="series">serias</option>
+        <option value="cartoon">cartoon</option>
+        <option value="arabic">arabic</option>
+        <option value="scary">scary</option>
+        <option value="anime">anime</option>
+      </select>
+
+      <div id="appea" style="display:none">
+
+      <h1 class="fre">Enter the Season</h1>
+      <input class="thumbdd" style="width:25px;border-radius:0px" type="number" name="season" value="">
+
+      <h1 class="fre">Enter the Episode number</h1>
+      <input class="thumbdd" style="width:25px;border-radius:0px" type="number" name="episode" value="">
+
+          <h1 class="fre">Choose the series</h1>
+          <select class="sel" name="seriasname">
+               {% for o in data %}
+                    <option value="{{ o }}">{{ o }}</option>
+              {% endfor %}
+          </select>
+      </div>
+      <input type="submit" class="deded" value="submit" name="">
+    </form>
+    <script type="text/javascript">
+    function sad() {
+      var e = document.getElementById("cat");
+      var strUser = e.options[e.selectedIndex].text;
+      console.log(strUser);
+      var asd = document.getElementById("appea");
+      if (strUser == 'serias'){
+          asd.style.display = 'block'
+      } else{
+        asd.style.display = 'none'
+       }
+    }
+
+    </script>
+{% endblock %}

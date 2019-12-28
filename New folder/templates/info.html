@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block links %}
+<link rel="stylesheet" href="/static/css/info.css">
+{% endblock%}
+
+{% block content %}
+<div class="mainnn">
+  <div class="sad">
+    <img src="{{profile}}" class="profile" alt="">
+    <div class="ded">
+      <h1>username : {{username}}</h1>
+      <h1>phone number : {{phone}}</h1>
+        <button><a href="change">change</a></button>
+    </div>
+  </div>
+</div>
+ {% endblock %}

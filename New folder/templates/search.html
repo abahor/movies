@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% block links %}
+<link rel="stylesheet" href="static/css/search.css">
+{% endblock %}
+{% block content %}
+<!--<link rel="stylesheet" href="static/css/search.css">-->
+    <article class="films">
+{% for i in  results %}
+
+      <section class="down">
+        	<img src='{{i.paththumb}}' onclick="window.open('/watch={{i.numbe}}')" class="thumb" alt="">
+        <h1 class="moviename name">{{i.name}}</h1>
+        <h3 class="moviename catogry">Catogry: {{i.cat}}</h3>
+        	<div class="buttons">
+      		    <input type="button" onclick="window.open('/watch={{i.numbe}}')" class="but normal" value="watch" name="button"/>
+        		<input type="button" onclick="window.open('{{i.pathmovie}}','_blank')" class="but aud" value="download" name="button" />
+        	</div>
+      </section>
+
+{% endfor %}
+        </article>
+{% endblock %}

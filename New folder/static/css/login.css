@@ -1,0 +1,33 @@
+body{
+  margin: 0px;
+  margin-top: 70px;
+  background: rgba(67,66,66, 1);
+  font-family: 'Roboto',serif;
+}
+header{
+  width: 100%;
+  background: rgba(255,255,255,1);
+  position: fixed;
+  top: 0px;
+
+
+}
+header > h1{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+input{
+  display: block;
+  padding: 10px 15px;
+  margin: auto;
+  margin-bottom: 7px;
+  border-radius: 5px;
+  outline: none;/*
+  width: 20%;*/
+  border: 0px;
+}
+.log{
+    margin: 200px;
+
+}

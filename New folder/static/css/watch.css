@@ -1,0 +1,85 @@
+body{
+  background: #101010;
+}
+#wrapper{
+  width: 890px;
+  margin: 10px auto;
+}
+nav{
+  background: rgba(250,250,250, 1);
+  width: 890px;
+  padding-bottom: 3px;
+}
+#defaultBar{
+  width: 890px;
+  position: relative;
+  background-color: #606060;
+  height: 10px;
+}
+#progressBar{
+  position: absolute;
+  height: 10px;
+  background-color: #3498db;
+}
+#playButton{
+  background-color: rgba(250, 250, 250, 1);
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-image: url(/static/svg/play.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor:pointer;
+}
+#downButt{
+  background-color: rgba(250, 250, 250, 1);
+  border: none;
+  height: 25px;
+  width: 28px;
+  float: right;
+  background-image: url(/static/svg/download.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-right: 5px;
+}
+#fullButton{
+  background-color: rgba(250, 250, 250, 1);
+  border: none;
+  height: 25px;
+  width: 28px;
+  float: right;
+  background-image: url(/static/svg/fullscreen.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 23px 21px;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-right: 5px;
+}
+
+#muteButton{
+  background-color: rgba(250, 250, 250, 1);
+  border: none;
+  height: 32px;
+  width: 32px;
+  background-image: url(/static/svg/speaker.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor:pointer;
+}
+#playButton:active {
+  position: relative;
+  top: 2px;
+  }
+#muteButton:active {
+  position: relative;
+  top: 2px;
+}
+#mytrack {
+    width: 890px;
+}/*
+::-webkit-media-controls {
+  display:none !important;
+}*/

@@ -1,0 +1,15 @@
+h1{
+  color: #f00;
+}
+a{
+  color: #f00;
+}
+a:focus{
+  color: #f00;
+}
+body{
+  background: #000;
+}/*
+.leave{
+  color: lightblue;
+}*/

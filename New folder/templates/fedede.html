@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+{% block links %}
+<link rel="stylesheet" href="/static/css/wor.css">
+{% endblock %}
+{% block content %}
+    {% for i in results %}
+    <div class="content">
+      <img src='{{i.paththumb}}'  onclick="window.open('/watch={{i.numbe}}')" alt="" class='thumb'>
+      <h1 class="movie-name">Episode : {{i.episode}}</h1>
+      <h3 class="catogary">Category: {{i.cat}}</h3>
+    </div>
+{% endfor %}
+{% endblock %}

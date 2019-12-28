@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Facemash</title>
+    <link rel="stylesheet" href="http://127.0.0.1:5000/static/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block links %}
+    {% endblock %}
+  </head>
+  <body onload="dede()">
+  <header>
+    <ul class="main-ul">
+      <li class="main header"><a href="/">Main</a></li>
+      <li class="main header"><a href="/account" id="saddeded">Videos</a></li>
+      <li class="main header"><a href="/logout">logout</a></li>
+    </ul>
+<!--    <a href="mp3.html" class="mp3"><img class="mp3 imge" src="youtube-music-app-icon-red-white.ico" alt=""></a>-->
+    <form class="fsearch" action="http://127.0.0.1:5000/search" method="get">
+      <input type="search" class="search" name="search" value="" placeholder="search">
+      <input type="submit" name="" value="" hidden>
+    </form>
+  </header>
+ {% block content %}
+  <video src="static/ran/siabrokenglass.mp4" muted  loop autoplay>
+  </video>
+<div class="black">
+  <div class="cato">
+    <div class="aligns">
+      <a href="http://127.0.0.1:5000/cat/action"><img src="static/img/action cat.jpg" alt=""></a>
+      <a href="http://127.0.0.1:5000/cat/arabic"><img src="static/img/arabic cat.jpg" alt=""></a>
+      <a href="http://127.0.0.1:5000/cat/anime"><img src="static/img/anime cat.jpg" alt=""></a>
+      <a href="http://127.0.0.1:5000/cat/comedy"><img src="static/img/comdey cat1.jpg" alt=""></a>
+    </div>
+    <div class="aligns">
+      <a href="http://127.0.0.1:5000/cat/scary"><img src="static/img/scary cat - Copy.png" alt=""></a>
+      <a href="http://127.0.0.1:5000/cat/series"><img src="static/img/series cat4.jpg" alt=""></a>
+      <a href="http://127.0.0.1:5000/cat/music"><img src="static/img/music cat.jpg" alt=""></a>
+      <a href="http://127.0.0.1:5000/cat/cartoon"><img src="static/img/cartoon  cat.jpg"></a>
+    </div>
+</div>
+</div>
+  {% endblock %}
+  <script>
+    function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i <ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+function dede(){
+var de = getCookie('username')
+var sad = document.getElementById('saddeded')
+sad.textContent = de.split('"')[1]
+console.log('dede')
+}
+  </script>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+{% block links %}
+<link rel="stylesheet" href="/static/css/wor.css">
+{% endblock %}
+{% block content %}
+{% for i in results %}
+    <div class="content">
+      <a href="/series/{{i.cat}}/{{i.season}}" ><img src='{{i.paththumb}}'  alt="" class='thumb'></a>
+      <h1 class="movie-name">season : {{i.season}}</h1>
+      <h3 class="catogary">Catogry: {{i.cat}}</h3>
+    </div>
+
+{% endfor %}
+{% endblock %}
