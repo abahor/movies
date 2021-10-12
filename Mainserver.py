@@ -12,7 +12,7 @@ import string
 
 app = Flask(__name__)
 
-db = MySQLdb.connect('127.0.0.1', 'codeXz', 'hpprobook450g3*', 'movies')
+db = MySQLdb.connect('127.0.0.1', 'codeXz', 'password*', 'movies')
 cursor = db.cursor()
 
 
